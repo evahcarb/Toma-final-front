@@ -1,0 +1,304 @@
+/* Estilos generales */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  position: relative;
+  overflow: hidden;
+  height: 70vh; 
+}
+
+.navbar {
+  background: rgba(34, 34, 34, 0.9);
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid #333;
+  transition: background 0.3s ease;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 30px;
+}
+
+.navbar a {
+  color: #b0b0b0;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 80px;
+}
+
+.search-container input {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  margin-right: 10px;
+  transition: background 0.3s;
+}
+
+/* Estilo del botón de búsqueda */
+#search-button {
+  background-color: #333;  /* Fondo oscuro para que combine con el tema */
+  color: #e0e0e0;  /* Texto en color claro */
+  border: 2px solid #4CAF50;  /* Borde verde para destacar */
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;  /* Transición suave al hacer hover */
+  width: 50px;  /* Ancho fijo para el botón */
+  height: 50px;  /* Altura fija para el botón */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Efecto hover para el botón de búsqueda */
+#search-button:hover {
+  background-color: #1d5a1f;  /* Fondo verde cuando se pasa el ratón */
+  color: #ffffff;  /* Cambia el color del texto a blanco */
+  border-color: #0a2c0c;  /* Color más oscuro para el borde */
+}
+
+/* Icono de búsqueda dentro del botón */
+#search-button::before {
+  content: "\f002";  /* Código de FontAwesome para el icono de lupa */
+  font-family: 'Font Awesome 5 Free';  /* Aseguramos que se usa FontAwesome */
+  font-weight: 900;  /* Hacer que el icono sea más grueso */
+  font-size: 20px;  /* Ajustamos el tamaño del icono */
+  color: #e0e0e0;  /* Color del icono */
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.9;
+}
+
+.main {
+  margin-top: 80px; 
+  padding: 40px;
+  background-color: #1a1a1a;
+}
+
+/* Estilo para el contenedor de filtros */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+  transition: all 0.3s ease; /* Para transición suave */
+}
+
+.filter-bar input,
+.filter-bar select,
+.filter-bar button {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+.filter-bar button {
+  background-color: #4CAF50;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.filter-bar button:hover {
+  background-color: #1d5a1f;;
+}
+
+#advanced-filters {
+  padding-right: 5em;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none; /* Para evitar clics en los elementos ocultos */
+}
+
+/* Area de migas de pan */
+.breadcrumb a {
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.breadcrumb a:hover {
+  color: #ffffff; 
+}
+
+/* Area de tarjetas */
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 50px;
+  padding: 20px;
+}
+
+.movie-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-title {
+  color: #e0e0e0;
+  font-size: 22px;  /* Tamaño de fuente fijo */
+  height: 0px;     /* Altura fija para el título */
+  margin-bottom: 100px;
+  text-align: center; /* Centra el título */
+  
+  
+}
+
+.movie-image {
+  width: 100%;
+  height: 60%;
+  border-radius: 8px;
+}
+
+.movie-info {
+  color: #b0b0b0;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.star-rating {
+  display: inline-block;
+}
+
+.star {
+  color: #888;
+}
+
+.star.filled {
+  color: #ff9800; /* Color moderno de estrella */
+}
+/* Area de footer*/
+
+footer {
+  background-color: #1a1a1a;
+  color: #e0e0e0; 
+  padding: 40px 20px;
+  text-align: left;
+  border-top: 3px solid #444; 
+}
+
+.footer-content {
+  display: flex;
+  align-items: flex-start; 
+}
+
+.footer-icon {
+  margin-right: 30px; 
+}
+
+.footer-logo {
+  width: 120px; 
+  height: auto; 
+}
+
+.footer-columns {
+  display: flex; 
+  justify-content: space-between; 
+  flex-wrap: wrap;
+  width: 100%; 
+}
+
+.footer-column {
+  flex: 1; 
+  min-width: 200px; 
+  margin: 0 10px; 
+}
+
+.footer-column h3 {
+  margin-bottom: 10px; 
+  color: #b0b0b0; 
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+  color: #e0e0e0; 
+}
+
+.footer-content ul li {
+  margin: 5px 0;
+}
+
+.footer-content ul li a {
+  color: #b0b0b0; 
+  transition: color 0.3s; 
+}
+
+.footer-content ul li a:hover {
+  color: #ffffff; 
+}
+
+.social-icons a {
+  color: #b0b0b0; 
+  margin: 0 10px; 
+  text-decoration: none;
+  font-size: 24px; 
+  transition: color 0.3s; 
+}
+
+.social-icons a:hover {
+  color: #ffffff; /
+}
+
+.footer-text {
+  text-align: center; 
+  margin-top: 20px; 
+}

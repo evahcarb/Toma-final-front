@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Películas</title>
+  <link rel="stylesheet" href="./css/styleListado.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="listado.html">Listado</a></li>
+        <li><a href="form.html">Agregar Película/Serie</a></li>
+      </ul>
+      <div class="filter-bar">
+        <div class="search-container">
+          <button id="toggle-filters" aria-label="Mostrar filtros avanzados">+ Filtros</button>
+
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Buscar películas..."
+            aria-label="Buscar películas"
+          />
+        </div>
+
+        <button id="search-button" aria-label="Buscar"></button>
+        <div id="advanced-filters" class="hidden">
+          <select id="genre-input" aria-label="Seleccionar género">
+            <option value="">Todos los géneros</option>
+            <option value="ACTION">Action</option>
+            <option value="ADVENTURE">Adventure</option>
+            <option value="COMEDY">Comedy</option>
+            <option value="DRAMA">Drama</option>
+            <option value="FANTASY">Fantasy</option>
+            <option value="HORROR">Horror</option>
+            <option value="MYSTERY">Mystery</option>
+            <option value="ROMANCE">Romance</option>
+            <option value="SCIENCE_FICTION">Science Fiction</option>
+            <option value="THRILLER">Thriller</option>
+            <option value="DOCUMENTARY">Documentary</option>
+            <option value="ANIMATION">Animation</option>
+            <option value="MUSICAL">Musical</option>
+            <option value="CRIME">Crime</option>
+            <option value="WAR">War</option>
+            <option value="WESTERN">Western</option>
+            <option value="BIOGRAPHY">Biography</option>
+            <option value="SPORT">Sport</option>
+          </select>
+          <input
+            type="number"
+            id="year-input"
+            placeholder="Año"
+            aria-label="Filtrar por año"
+          />
+        </div>
+      </div>
+    </nav>
+    <img src="/css/img/img.png" alt="Portada de Películas" class="cover-image">
+  </header>
+
+  <main>
+    <nav class="breadcrumb">
+      <a href="inicio.html">Inicio</a> > 
+      <a href="listado.html">Listado de Películas / Series</a>
+    </nav>
+    <div id="movies-container" class="movies-container"></div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-icon">
+        <img src="/footer/icono.png" alt="Ícono de la Página" class="footer-logo">
+      </div>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>Documentos Legales</h3>
+          <ul>
+            <li><a href="/footer/documentosLegales/politicaPrivacidad.html">Política de Privacidad</a></li>
+            <li><a href="/footer/documentosLegales/TerminosCondicionesUso.html">Términos y Condiciones</a></li>
+            <li><a href="/footer/documentosLegales/politicaConfidencialidad.html">Política de Confidencialidad</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contacto</h3>
+          <ul>
+            <li>Contacto: <a href="mailto:soporte@tomafinal.com">soporte@tomafinal.com</a></li>
+            <li>Teléfono: +34 123 456 789</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Síguenos</h3>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-text">
+      <p>&copy; 2024 TomaFinal Movie Review. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script src="/js/scriptListado.js"></script>
+</body>
+</html>
